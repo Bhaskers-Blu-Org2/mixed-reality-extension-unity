@@ -152,17 +152,17 @@ namespace MixedRealityExtension.Core
 		{
 			// Apply any changes made to the state of the mixed reality extension runtime version of the rigid body.
 
-			if (patchVelocities)
-			{
-				if (patch.Velocity != null && patch.Velocity.IsPatched())
-				{
-					_rigidbody.velocity = _rigidbody.velocity.GetPatchApplied(_sceneRoot.TransformDirection(Velocity.ApplyPatch(patch.Velocity).ToVector3()));
-				}
-				if (patch.AngularVelocity != null && patch.AngularVelocity.IsPatched())
-				{
-					_rigidbody.angularVelocity = _rigidbody.angularVelocity.GetPatchApplied(_sceneRoot.TransformDirection(AngularVelocity.ApplyPatch(patch.AngularVelocity).ToVector3()));
-				}
-			}
+			//if (patchVelocities)
+			//{
+			//	if (patch.Velocity != null && patch.Velocity.IsPatched())
+			//	{
+			//		_rigidbody.velocity = _rigidbody.velocity.GetPatchApplied(_sceneRoot.TransformDirection(Velocity.ApplyPatch(patch.Velocity).ToVector3()));
+			//	}
+			//	if (patch.AngularVelocity != null && patch.AngularVelocity.IsPatched())
+			//	{
+			//		_rigidbody.angularVelocity = _rigidbody.angularVelocity.GetPatchApplied(_sceneRoot.TransformDirection(AngularVelocity.ApplyPatch(patch.AngularVelocity).ToVector3()));
+			//	}
+			//}
 
 			if (patch.Mass.HasValue)
 			{
